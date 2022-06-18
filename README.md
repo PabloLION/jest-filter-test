@@ -18,4 +18,4 @@ The [documentation](https://jestjs.io/docs/cli#--filterfile) for `--filter` opti
   testRegex:  - 0 matches
 ```
 
-I also tried to add a `writeFileSync(__dirname + '/tmp.txt', testPaths.toString());` but it didn't work either.
+I also tried to add a `writeFileSync(__dirname + '/testPaths.txt', testPaths.toString());` but it didn't work either.
