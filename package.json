@@ -6,9 +6,30 @@
   "author": "Pablo LION <36828324+Pablion@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
   },
   "devDependencies": {
-    "@types/jest": "^28.1.2"
-  }
+    "@types/jest": "^28.1.2",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "globalSetup-comment": "./src/utils/test/jest-setup.ts",
+    "globalTeardown-comment": "./src/utils/test/jest-teardown.ts",
+    "globals": {
+      "ts-jest": {
+        "tsconfig": {
+          "module": "ESNext",
+          "target": "ES2017"
+        },
+        "useESM": true
+      }
+    },
+    "preset": "ts-jest",
+    "setupFilesAfterEnv-comment": [
+      "./src/utils/test/global-beforeAll.ts"
+    ],
+    "testEnvironment": "node"
+  },
+  "types": "module"
 }
