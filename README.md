@@ -17,3 +17,5 @@ The [documentation](https://jestjs.io/docs/cli#--filterfile) for `--filter` opti
   testPathIgnorePatterns: /node_modules/ - 5 matches
   testRegex:  - 0 matches
 ```
+
+I also tried to add a `writeFileSync(__dirname + '/tmp.txt', testPaths.toString());` but it didn't work either.
